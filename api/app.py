@@ -64,7 +64,7 @@ def write_providers_json(data):
 
 @app.route('/')
 def index():
-    return "Not Found", 404
+    return "Not Found", 200
     # template_list = get_template_list()
     # template_options = [f"{index + 1}、{template}" for index, template in enumerate(template_list)]
     # providers_data = read_providers_json()
