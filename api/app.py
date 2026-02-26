@@ -64,11 +64,13 @@ def write_providers_json(data):
 
 @app.route('/')
 def index():
-    template_list = get_template_list()
-    template_options = [f"{index + 1}、{template}" for index, template in enumerate(template_list)]
-    providers_data = read_providers_json()
-    temp_json_data = get_temp_json_data()
-    return render_template('index.html', template_options=template_options, providers_data=json.dumps(providers_data, indent=4, ensure_ascii=False), temp_json_data=json.dumps(temp_json_data, indent=4, ensure_ascii=False))
+    return "Not Found", 404
+    # template_list = get_template_list()
+    # template_options = [f"{index + 1}、{template}" for index, template in enumerate(template_list)]
+    # providers_data = read_providers_json()
+    # temp_json_data = get_temp_json_data()
+    
+    # return render_template('index.html', template_options=template_options, providers_data=json.dumps(providers_data, indent=4, ensure_ascii=False), temp_json_data=json.dumps(temp_json_data, indent=4, ensure_ascii=False))
 
 @app.route('/update_providers', methods=['POST'])
 def update_providers():
